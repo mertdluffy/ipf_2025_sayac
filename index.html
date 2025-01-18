@@ -2,96 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPF 2025 Türkiye Sayaç</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .counter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .counter {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+
+        .counter h2 {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            color: #f1c40f;
+        }
+
+        .counter p {
+            font-size: 1.2rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
 </head>
 <body>
-<!-- Display the countdown timer in an element -->
-<p id="demo" style="font-size:30px">&nbsp;</p>
+<h1>IPF 2025 Türkiye Sayaç</h1>
 
-<p id="demo93" style="font-size:30px">&nbsp;</p>
+<div class="counter-container">
+    <div class="counter">
+        <h2>Mert</h2>
+        <p id="demo"></p>
+    </div>
 
-<p id="demo59" style="font-size:30px">&nbsp;</p>
+    <div class="counter">
+        <h2>Tuğberk</h2>
+        <p id="demo59"></p>
+    </div>
+
+    <div class="counter">
+        <h2>Alihan ve Ali</h2>
+        <p id="demo93"></p>
+    </div>
+</div>
+
+<footer>© 2025 IPF Sayaç. Tüm hakları saklıdır.</footer>
+
 <script>
-    // Set the date we're counting down to
     var countDownDate = new Date("Jan 26, 2025 07:00:00").getTime();
 
-    // Update the count down every 1 second
     var x = setInterval(function() {
-
-        // Get today's date and time
         var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
         var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML ="Mert: " + days + " days " + hours + " hours "
-            + minutes + " minutes " + seconds + " seconds out";
+        document.getElementById("demo").innerHTML = days + " gün " + hours + " saat " + minutes + " dakika " + seconds + " saniye kaldı";
 
-        // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("demo").innerHTML = "SÜRE DOLDU";
         }
     }, 1000);
 
     var tuberkCountDownDate = new Date("Jan 25, 2025 07:00:00").getTime();
     var xy = setInterval(function() {
-
-        // Get today's date and time
         var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
         var distance = tuberkCountDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="demo"
-        document.getElementById("demo59").innerHTML ="Tuğberk: " + days + " days " + hours + " hours "
-            + minutes + " minutes " + seconds + " seconds out";
+        document.getElementById("demo59").innerHTML = days + " gün " + hours + " saat " + minutes + " dakika " + seconds + " saniye kaldı";
 
-        // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(xy);
-            document.getElementById("demo59").innerHTML = "EXPIRED";
+            document.getElementById("demo59").innerHTML = "SÜRE DOLDU";
         }
     }, 1000);
 
-
-
     var CountDownDate93 = new Date("Jan 27, 2025 07:00:00").getTime();
     var xyz = setInterval(function() {
-
-        // Get today's date and time
         var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
         var distance = CountDownDate93 - now;
 
-        // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="demo"
-        document.getElementById("demo93").innerHTML ="Alihan ve Ali: " + days + " days " + hours + " hours "
-            + minutes + " minutes " + seconds + " seconds out";
+        document.getElementById("demo93").innerHTML = days + " gün " + hours + " saat " + minutes + " dakika " + seconds + " saniye kaldı";
 
-        // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(xyz);
-            document.getElementById("demo93").innerHTML = "EXPIRED";
+            document.getElementById("demo93").innerHTML = "SÜRE DOLDU";
         }
     }, 1000);
 </script>
